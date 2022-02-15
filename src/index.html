@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Rendimentos</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Simulador de Investimentos</h1>
+    </header>
+    <main class="container">
+        <div class="simulator">
+            <h3>Simulador</h3>
+            <div class="simulator-info">
+                <div class="income">
+                    <div class="income-info">
+                        <div class="income-title">
+                            <label for="income-btn">Rendimento</label>🛈
+                        </div>
+                        <div class="income-btn">
+                            <button class="brute-btn"><span class="show">&#x2714</span>Bruto</button>
+                            <button class="liquid-btn"><span class="show">&#x2714</span>Líquido</button>
+                        </div>
+                        <label for="income-input">Aporte Inicial</label>
+                        <div><p>R$</p><input  type="text" name="income-input" class="income-input" placeholder="1000.00"></div>
+                        <hr>
+                        <p class="show">Aporte deve ser números</p>
+                        <label for="income-time">Prazo (em meses)</label>
+                        <input type="text" name="income-time" class="income-time" placeholder="10">
+                        <p class="show">Prazo deve ser números</p>
+                        <label for="income-ipca">IPCA (ao ano)</label>
+                        <input type="text" name="income-ipca" class="income-ipca" readonly>
+                    </div>
+                    <button class="clear-btn">Limpar Campos</button>
+                </div>
+                <div class="contribution">
+                    <div class="contribution-info">
+                        <div class="contribution-title">
+                            <label for="contribution-btn">Tipos de indexação</label>🛈
+                        </div>
+                        <div class="contribution-btn">
+                            <button class="pre-btn"><span class="show">&#x2714</span>PRÉ</button>
+                            <button class="pos-btn"><span class="show">&#x2714</span>PÓS</button>
+                            <button class="fixed-btn"><span class="show">&#x2714</span>FIXADO</button>
+                        </div>
+                        <label for="contribution-input">Aporte Mensal</label>
+                        <div><p>R$</p><input type="text" name="contribution-input" class="contribution-input" placeholder="1000.00"></div>
+                        <hr>
+                        <p class="show">Aporte deve ser números</p>
+                        <label for="contribution-profitability">Rentabilidade (em %)</label>
+                        <input type="text" name="contribution-profitability" class="contribution-profitability" placeholder="15">
+                        <p class="show">Rentabilidade deve ser números</p>
+                        <label for="contribution-cdi">CDI (ao ano)</label>
+                        <input type="text" name="contribution-cdi" class="contribution-cdi" readonly>
+                    </div>
+                    <button class="simulate-btn">Simular</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="information">
+            <div class="results">
+                <div class="results-title">
+                    <h3>Resultado da Simulação</h3>
+                </div>
+                <div class="results-info">
+                    <div class="info">
+                        <h4>Valor final Bruto</h4>
+                        <p class="brute-final">vwewevew</p>
+                    </div>
+                    <div class="info">
+                        <h4>Alíquota do IR</h4>
+                        <p class="aliquot">vewevwvwe</p>
+                    </div>
+                    <div class="info">
+                        <h4>Valor pago em IR</h4>
+                        <p class="tax">VWRWWRWV</p>
+                    </div>
+                    <div class="info">
+                        <h4>Valor final Líquido</h4>
+                        <p class="final-liquid">vWWVWAR</p>
+                    </div>
+                    <div class="info">
+                        <h4>Valor Total Investido</h4>
+                        <p class="total-amount">QEVE</p>
+                    </div>
+                    <div class="info">
+                        <h4>Ganho Líquido</h4>
+                        <p class="gain">awdvwv</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="graph">
+
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

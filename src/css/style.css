@@ -1,0 +1,294 @@
+
+/*Zerar atributos/variaveis*/
+*{
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --primary-color: #ED8E53;
+    --secondary-color: #EFEFEF;
+    --third-color: #4EA840;
+}
+
+/*Header/page*/
+
+header{
+    margin: 20px 20px 0 20px ;
+    text-align: center;
+    padding-top: 20px;
+    background-color: var(--secondary-color);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap;
+    min-width: 90%;
+    background-color: var(--secondary-color);
+    margin: 0 20px;
+}
+
+
+
+.simulator{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.simulator h3{
+    margin-left: 5%;
+}
+
+.simulator label{
+    display:block;
+}
+
+.simulator-info{
+    display: flex;
+    margin: 10px 5%;
+}
+
+.income-info{
+    display: flex;
+    flex-direction: column;
+    padding-right: 30px;
+    flex-wrap: nowrap;
+}
+
+.income, .contribution{
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+    padding-right:20px;
+}
+
+.income-title, .contribution-title {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.income-btn{
+    display: flex;
+}
+
+.brute-btn, .liquid-btn{
+    margin: 10px 0 15px 0;
+    min-width:50%;
+    display:flex;
+    padding: 12px 8px;
+    justify-content: center;
+    border: 2px solid #000;
+    transition-duration: .3s;
+    cursor: pointer;
+}
+
+.show{
+    visibility: hidden ;
+    margin-right: -7px;
+}
+
+span{
+    visibility:visible;
+    margin-right: 0px;
+    color: #fff;
+}
+
+.checked{
+    visibility: visible;
+    margin-right: 0px;
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+.brute-btn{
+    border-radius: 8px 0 0 8px;
+}
+.liquid-btn{
+    border-radius:0 8px 8px 0;
+}
+
+.income-info input, .contribution-info input{
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    outline: none;
+    padding-bottom: 8px;
+    background-color: var(--secondary-color);
+    margin: 10px 0 12px 0;
+}
+
+.income-input, .contribution-input{
+    border: none;
+    padding-left: 5px;
+    max-width: 85%;
+}
+
+.income-info p, .contribution-info p{
+    display: inline-block;
+    color: #000;
+}
+
+.simulator-info label{
+    padding: 5px 0;
+    
+}
+
+hr{
+    margin-top: -10px;
+    padding:1px 0 0 0;
+    background-color: #000;
+    margin-bottom:10px;
+}
+
+
+.clear-btn, .simulate-btn{
+    font-size: 1.1rem;
+    padding: 10px 0;
+    border: 2px solid #000;
+    border-radius: 10px;
+    margin: 10px 0 30px 0;
+    font-weight: bold;
+    transition-duration: .3s;
+    cursor: pointer;
+}
+
+.clear-btn:hover, .simulate-btn:hover, .brute-btn:hover, .liquid-btn:hover{
+    background-color: var(--primary-color);
+}
+
+.contribution-info{
+    display: flex;
+    flex-direction: column;
+    padding-left: 24px;
+}
+
+.contribution-btn{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.pre-btn{
+    flex: 1;
+    border-radius: 8px 0 0 8px;
+}
+
+.pos-btn{
+    flex: 1;
+}
+
+.fixed-btn{
+    flex: 2;
+    border-radius: 0 8px 8px 0;
+}
+
+.pre-btn, .pos-btn, .fixed-btn{
+    margin: 10px 0 15px 0;
+    min-width:30%;
+    display:flex;
+    padding: 12px 2px;
+    justify-content: center;
+    border: 2px solid #000;
+    transition-duration: .3s;
+    cursor: pointer;
+    margin-bottom: 14px;
+}
+
+.pre-btn:hover, .pos-btn:hover, .fixed-btn:hover{
+    background-color: var(--primary-color)
+}
+
+.simulate-btn{
+    background-color: #969696;
+    border: 2px solid #969696;
+}
+.simulate-btn:hover{
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.contribution-profitability{
+    margin-top: 50px;
+}
+
+.simulator p {
+    font-size: 12px;
+}
+
+p.warning, .warning {
+    color:#d34848;
+    visibility:visible;
+}
+
+hr.warning{
+    background-color: #d34848;
+}
+
+/*
+    Resultados
+*/
+
+.information{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex:2;
+    min-width: 60%;
+    padding-right: 10px;
+    min-height: 512px;
+}
+
+.results{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.results-title{
+    display: flex;
+    width: 100%;
+    height: 25px;
+    margin-left: 20px;
+}
+
+.results-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.info{
+    font-size: .8rem;
+    padding: 5px 5px;
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+    width: 170px;
+    align-items: center;
+    justify-content: space-around;
+    margin: 15px 25px;
+    box-shadow: 0 0 8px #999;
+}
+
+.final-liquid, .gain{
+    color: #4fa043;
+}
+
+
+
+
+
+
+
+
+.graph{
+    display: flex;
+}
