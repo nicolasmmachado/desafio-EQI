@@ -39,6 +39,7 @@ header{
     display: flex;
     flex-direction: column;
     flex: 1;
+    min-width: 492px;
 }
 
 .simulator h3{
@@ -59,6 +60,7 @@ header{
     flex-direction: column;
     padding-right: 30px;
     flex-wrap: nowrap;
+    max-width: 300px;
 }
 
 .income, .contribution{
@@ -89,7 +91,7 @@ header{
     cursor: pointer;
 }
 
-.show{
+.hide{
     visibility: hidden ;
     margin-right: -7px;
 }
@@ -157,6 +159,7 @@ hr{
     font-weight: bold;
     transition-duration: .3s;
     cursor: pointer;
+    max-width: 300px;
 }
 
 .clear-btn:hover, .simulate-btn:hover, .brute-btn:hover, .liquid-btn:hover{
@@ -167,6 +170,7 @@ hr{
     display: flex;
     flex-direction: column;
     padding-left: 24px;
+    max-width: 300px;
 }
 
 .contribution-btn{
