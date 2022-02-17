@@ -5,11 +5,6 @@ async function loadPage() {
     let loadPageJson = await loadPage.json();
     document.querySelector(".income-ipca").value = `${loadPageJson[1].valor}%`;
     document.querySelector(".contribution-cdi").value = `${loadPageJson[0].valor}%`;
-    let loadSimulation = await fetch("http://localhost:3000/simulacoes?tipoIndexacao=pre&tipoRendimento=bruto", { 
-        method: "GET"
-    });
-    let loadSimulationJson = await loadSimulation.json();
-    console.log(loadSimulationJson);
 }
 
 loadPage();
@@ -56,14 +51,12 @@ incomeInput.addEventListener("keyup", () => {
         label[1].classList.add("warning");
         hr[0].classList.add("warning");
         hide[2].classList.remove("hide");
-        hide[2].classList.add("warning");
     }
     else{
         incomeInput.previousSibling.classList.remove("warning");
         label[1].classList.remove("warning");
         hr[0].classList.remove("warning");
         hide[2].classList.add("hide");
-        hide[2].classList.remove("warning");
     }
 });
 
@@ -73,12 +66,10 @@ incomeTime.addEventListener("keyup", () => {
     if(isNaN(testNum)) {
         label[2].classList.add("warning");
         hide[3].classList.remove("hide");
-        hide[3].classList.add("warning");
     }
     else{
         label[2].classList.remove("warning");
         hide[3].classList.add("hide");
-        hide[3].classList.remove("warning");
     }
 });
 
@@ -124,14 +115,12 @@ contributionInput.addEventListener("keyup", () => {
         label[5].classList.add("warning");
         hr[1].classList.add("warning");
         hide[7].classList.remove("hide");
-        hide[7].classList.add("warning");
     }
     else{
         contributionInput.previousSibling.classList.remove("warning");
         label[5].classList.remove("warning");
         hr[1].classList.remove("warning");
         hide[7].classList.add("hide");
-        hide[7].classList.remove("warning");
     }
 });
 
@@ -141,12 +130,10 @@ contributionProf.addEventListener("keyup", () => {
     if(isNaN(testNum)) {
         label[6].classList.add("warning");
         hide[8].classList.remove("hide");
-        hide[8].classList.add("warning");
     }
     else{
         label[6].classList.remove("warning");
         hide[8].classList.add("hide");
-        hide[8].classList.remove("warning");
     }
 });
 
@@ -155,8 +142,20 @@ document.querySelector(".clear-btn").addEventListener("click", () => {
     incomeTime.value = "";
     contributionInput.value = "";
     contributionProf.value = "";
+    incomeInput.previousSibling.classList.remove("warning");
+    label[1].classList.remove("warning");
+    hr[0].classList.remove("warning");
+    hide[2].classList.add("hide");
     brute.classList.remove("checked");
     liquid.classList.remove("checked");
+    contributionInput.previousSibling.classList.remove("warning");
+    label[5].classList.remove("warning");
+    hr[1].classList.remove("warning");
+    hide[7].classList.add("hide");
+    label[6].classList.remove("warning");
+    hide[8].classList.add("hide");
+    label[2].classList.remove("warning");
+    hide[3].classList.add("hide");
     pre.classList.remove("checked");
     pos.classList.remove("checked");
     fixed.classList.remove("checked");

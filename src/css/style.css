@@ -27,23 +27,24 @@ header{
 .container {
     display: flex;
     align-items: center;
-    flex-wrap:wrap;
     min-width: 90%;
     background-color: var(--secondary-color);
     margin: 0 20px;
 }
-
-
 
 .simulator{
     display: flex;
     flex-direction: column;
     flex: 1;
     min-width: 492px;
+    max-width: 620px;
 }
 
-.simulator h3{
-    margin-left: 5%;
+.simulator-title{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 20px;
 }
 
 .simulator label{
@@ -97,8 +98,6 @@ header{
 }
 
 span{
-    visibility:visible;
-    margin-right: 0px;
     color: #fff;
 }
 
@@ -227,7 +226,6 @@ hr{
 
 p.warning, .warning {
     color:#d34848;
-    visibility:visible;
 }
 
 hr.warning{
@@ -243,7 +241,6 @@ hr.warning{
     flex-direction: column;
     flex-wrap: nowrap;
     flex:2;
-    min-width: 60%;
     padding-right: 10px;
     min-height: 512px;
 }
@@ -253,6 +250,7 @@ hr.warning{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 850px;
 }
 
 .results-title{
@@ -286,9 +284,50 @@ hr.warning{
     color: #4fa043;
 }
 
+/*Mobile CSS*/
 
+@media (max-width: 1000px){
+    .container {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+}
 
+@media (max-width: 540px){
+    header{
+        margin: 20 0 0 0;
+        min-width: 90%;
+    }
+    h1{
+        font-size: 1.2rem;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    h3{
+        font-size: 1rem;
+    }
+    label{
+        font-size:.9rem;
+    }
+    .simulator{
+        min-width: 300px;
+        min-height: 0px;
+    }
+    .simulator-title{
+        align-items: center;
+        justify-content: center;
 
+    }
+    .simulator-info{
+        flex-direction: column;
+        align-items: center;
+    }
+    .results-title{
+        justify-content: center;
+        align-items: center;
+    }
+}
 
 
 

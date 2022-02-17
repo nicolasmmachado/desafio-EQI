@@ -13,7 +13,7 @@
     </header>
     <main class="container">
         <div class="simulator">
-            <h3>Simulador</h3>
+            <h3 class="simulator-title">Simulador</h3>
             <div class="simulator-info">
                 <div class="income">
                     <div class="income-info">
@@ -27,10 +27,10 @@
                         <label for="income-input">Aporte Inicial</label>
                         <div><p>R$</p><input  type="text" name="income-input" class="income-input" placeholder="1000.00"></div>
                         <hr>
-                        <p class="hide">Aporte deve ser números</p>
+                        <p class="hide warning">Aporte deve ser números</p>
                         <label for="income-time">Prazo (em meses)</label>
                         <input type="text" name="income-time" class="income-time" placeholder="10">
-                        <p class="hide">Prazo deve ser números</p>
+                        <p class="hide warning">Prazo deve ser números</p>
                         <label for="income-ipca">IPCA (ao ano)</label>
                         <input type="text" name="income-ipca" class="income-ipca" readonly>
                     </div>
@@ -49,10 +49,10 @@
                         <label for="contribution-input">Aporte Mensal</label>
                         <div><p>R$</p><input type="text" name="contribution-input" class="contribution-input" placeholder="1000.00"></div>
                         <hr>
-                        <p class="hide">Aporte deve ser números</p>
+                        <p class="hide warning">Aporte deve ser números</p>
                         <label for="contribution-profitability">Rentabilidade (em %)</label>
                         <input type="text" name="contribution-profitability" class="contribution-profitability" placeholder="15">
-                        <p class="hide">Rentabilidade deve ser números</p>
+                        <p class="hide warning">Rentabilidade deve ser números</p>
                         <label for="contribution-cdi">CDI (ao ano)</label>
                         <input type="text" name="contribution-cdi" class="contribution-cdi" readonly>
                     </div>
